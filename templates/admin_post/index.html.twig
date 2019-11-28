@@ -40,7 +40,7 @@
 						<td>
 							{{ post.title }}</td>
 						<td>
-							{{ post.created_at }}</td>
+							{{ post.getCreatedAt()|date("Y-m-d H:i:s") }}</td>
 						<td>
 							<a href="{{ path('admin_edit', {id : post.id})}}" class="btn btn-primary">
 								Modify</a>
