@@ -6,6 +6,8 @@ use App\Entity\Post;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+
 
 class PostType extends AbstractType
 {
@@ -14,6 +16,7 @@ class PostType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
+            ->add('imageFile',FileType::class, [ 'required' => false ])
         ;
     }
 
