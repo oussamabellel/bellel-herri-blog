@@ -1,24 +1,32 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TestController!{% endblock %}
+{% block title %}Hello TestController!
+{% endblock %}
 
 {% block body %}
 
-<div class="jumbotron">
-    <h1> Football Blog </h1>
-</div>
+	<div class="jumbotron">
+		<h1>
+			Football Blog
+		</h1>
+	</div>
 
-<div class="container">
-    <div class="row flex">
-        {% for post in posts %}
-        <div class="col-8">
-            <a href="{{ path('post', {id : post.id})}}">
-                <h3> {{ post.title }}</h3>
-            </a>
-            <p> {{ post.description }}</p>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+	<div class="container">
+		<div class="row flex">
+			{% for post in posts %}
+				<div class="col-8">
+					<a href="{{ path('post', {id : post.id})}}">
+						<h3>
+							{{ post.title }}</h3>
+					</a>
+					<p>
+						{{ post.description }}</p>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="pagination">
+			{{ knp_pagination_render(posts) }}
+		</div>
+	</div>
 
 {% endblock %}
