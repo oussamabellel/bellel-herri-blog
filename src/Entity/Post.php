@@ -38,7 +38,7 @@ class Post
     private $title;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", length=2000)
      */
     private $description;
 

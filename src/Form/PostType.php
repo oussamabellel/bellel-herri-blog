@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 
 class PostType extends AbstractType
@@ -15,7 +16,7 @@ class PostType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('description')
+            ->add('description', TextareaType::class, ['attr' => ['rows' => '10%','cols' => '10%' ]])
             ->add('imageFile',FileType::class, [ 'required' => false ])
         ;
     }

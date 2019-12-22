@@ -13,44 +13,45 @@
 
 	<div
 		class="container">
-		{# <div class="row flex">
-																	{% for post in posts %}
-																		<div class="col-4">
-																			{% if post.filename %}
-																				<img src="{{ vich_uploader_asset(post, 'imageFile')}}" style="width:60%; height:auto;">
-																			{% endif %}
-																			<a href="{{ path('post', {id : post.id})}}">
-																				<h3>
-																					{{ post.title }}
-																				</h3>
-																			</a>
-																			<p>
-																				{{ post.description }}
-																			</p>
-																		</div>
-																	{% endfor %}
-																</div>
-																<div class="pagination">
-																	{{ knp_pagination_render(posts) }}
-																</div> #}
+{# <div class="row flex">
+	{% for post in posts %}
+		<div class="col-4">
+			{% if post.filename %}
+				<img src="{{ vich_uploader_asset(post, 'imageFile')}}" style="width:60%; height:auto;">
+			{% endif %}
+			<a href="{{ path('post', {id : post.id})}}">
+				<h3>
+					{{ post.title }}
+				</h3>
+			</a>
+			<p>
+				{{ post.description }}
+			</p>
+		</div>
+	{% endfor %}
+</div>
+<div class="pagination">
+	{{ knp_pagination_render(posts) }}
+</div> #}
 		<div class="row">
 			{% for post in posts %}
-				<div class="col-mb-4 mr-3">
+				<div class="col-mb-4 mr-2 ml-2">
 					<div class="card mb-4" style="width: 18rem;">
 						{% if post.filename %}
+						<a href="{{ path('post', {id : post.id})}}">
 							<img class="card-img-top" style="width: 100%;
-								height: 40vh;
+								height: 70vh;
 								object-fit: cover;" src="{{ vich_uploader_asset(post, 'imageFile')}}">
+						</a>
 						{% endif %}
 						<div class="card-body">
-							<h5 class="card-title">{{ post.title }}</h5>
-							<p class="card-text">{{ post.description }}</p>
+							<a href="{{ path('post', {id : post.id})}}"><h5 class="card-title">{{ post.title }}</h5></a>
+							<p class="card-text">{{ post.description|slice(0, 100) ~ '...' }}</p>
 						</div>
 					</div>
 				</div>
 			{% endfor %}
 		</div>
-
 		<div class="pagination">
 			{{ knp_pagination_render(posts) }}
 		</div>

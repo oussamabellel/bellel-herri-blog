@@ -18,9 +18,9 @@ class TestController extends AbstractController
     {
         // $posts = $this->getDoctrine()->getRepository(Post::class)->findAll();
         $posts = $paginator->paginate(
-        $this->getDoctrine()->getRepository(Post::class)->findAll(),
+        $this->getDoctrine()->getRepository(Post::class)->findBy([], ['created_at' => 'DESC']),
         $request->query->getInt('page', 1),
-        5 );
+        6 );
         return $this->render('test/index.html.twig', [
             'controller_name' => 'TestController',
             'posts' => $posts
