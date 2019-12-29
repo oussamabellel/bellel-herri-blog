@@ -3,16 +3,15 @@
 {% block title %}Hello AdminPostController!{% endblock %}
 
 {% block body %}
+    <div class="page-content p-3 bg-white rounded my-shadow">
+        <h1> Create Post </h1>
+        <hr>
+        {{form_start(form)}}
+        {{form_rest(form)}}
+        <button class="btn btn-warning"> Create </button>
+        {{form_end(form)}}
 
-<div class="container mt-4">
-    <h1> Create Post </h1>
-    <hr>
-    {{form_start(form)}}
-    {{form_rest(form)}}
-    <button class="btn btn-warning"> Create </button>
-    {{form_end(form)}}
+        {# ou utiliser form_row(form.title) #}
 
-    {# ou utiliser form_row(form.title) #}
-
-</div>
+    </div>
 {% endblock %}

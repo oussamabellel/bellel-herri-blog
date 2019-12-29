@@ -3,12 +3,11 @@
 {% block title %}Login{% endblock %}
 
 {% block body %}
-
-<div class="container mt-4">
-    <h1> Login </h1>
-    <hr>
-    <div class="row">
-        <div class="col-xs-12">
+    <div id="test" class="d-flex justify-content-center">
+        <div class="page-content login-card col-xl-4 col-lg-6 col-md-10 border rounded px-4 py-3 my-shadow">
+            <div class="login-logo d-flex justify-content-center">
+                <img src="{{ asset('images/logo/logo.png') }}">
+            </div>
             {% block fos_user_content %}
             {% endblock %}
         </div>

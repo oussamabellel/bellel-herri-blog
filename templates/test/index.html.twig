@@ -4,15 +4,33 @@
 {% endblock %}
 
 {% block body %}
+	<div class="page-content p-3 bg-white rounded my-shadow">
+		<div class="row d-flex justify-content-center">
+			{% for post in posts %}
+				<div class="col-md-4 col-sm-6 col-lg-3 col-xl-2 d-flex justify-content-center">
+					<div class="card mb-4" style="width: 18rem;">
+						{% if post.filename %}
+						<a href="{{ path('post', {id : post.id})}}">
+							<div class="embed-responsive embed-responsive-1by1">
+							<img class="card-img-top embed-responsive-item" src="{{ vich_uploader_asset(post, 'imageFile')}}">
+							</div>
+						</a>
+						{% endif %}
+						<div class="card-body">
+							<a href="{{ path('post', {id : post.id})}}"><h5 class="card-title">{{ post.title }}</h5></a>
+							<p class="card-text">{{ post.description|slice(0, 100) ~ '...' }}</p>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
 
-	<div class="jumbotron">
-		<h1>
-			Football Blog
-		</h1>
-	</div>
+		<div class="pagination d-flex justify-content-center">
+			{{ knp_pagination_render(posts) }}
+		</div>
+	<div>
+{% endblock %}
 
-	<div
-		class="container">
 {# <div class="row flex">
 	{% for post in posts %}
 		<div class="col-4">
@@ -33,27 +51,3 @@
 <div class="pagination">
 	{{ knp_pagination_render(posts) }}
 </div> #}
-		<div class="row">
-			{% for post in posts %}
-				<div class="col-mb-4 mr-2 ml-2">
-					<div class="card mb-4" style="width: 18rem;">
-						{% if post.filename %}
-						<a href="{{ path('post', {id : post.id})}}">
-						  <div class="embed-responsive embed-responsive-1by1">
-							<img class="card-img-top embed-responsive-item" src="{{ vich_uploader_asset(post, 'imageFile')}}">
-							</div>
-						</a>
-						{% endif %}
-						<div class="card-body">
-							<a href="{{ path('post', {id : post.id})}}"><h5 class="card-title">{{ post.title }}</h5></a>
-							<p class="card-text">{{ post.description|slice(0, 100) ~ '...' }}</p>
-						</div>
-					</div>
-				</div>
-			{% endfor %}
-		</div>
-		<div class="pagination">
-			{{ knp_pagination_render(posts) }}
-		</div>
-	</div>
-{% endblock %}

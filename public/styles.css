@@ -1,0 +1,61 @@
+body {
+  background-color : #fff4ed !important
+}
+
+a {
+  color: #994711 !important;
+ 
+}
+
+a:after {
+  color: #994711 !important;
+}
+
+.btn-orange {
+    color: #fff;
+    background-color: #994711;
+    border-color: #994711;
+}
+
+.btn-orange:hover, .btn-orange:focus, .btn-orange:active, .btn-orange.active, .open>.dropdown-toggle.btn-orange {
+  color: #fff !important;
+  background-color: #994711 !important;
+  border-color: #994711 !important; /*set the color you want here*/
+}
+
+#top-nav {
+    background-color : #e06717;
+    height: 5em;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu {
+    background-color: #3344ff;
+    color:#ffffff;
+  }
+
+.navbar-default .dropdown-menu {
+     background-color: #3344ff;
+     color:#ffffff;
+
+}
+
+#top-nav a {
+  color: #fff !important;
+}
+
+.login-card {
+  background-color: white;
+}
+.login-logo {
+  height: 250px;
+  width: auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.my-shadow {
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 8px 0 rgba(0, 0, 0, 0.19);
+}
