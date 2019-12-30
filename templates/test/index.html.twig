@@ -30,3 +30,24 @@
 		</div>
 	<div>
 {% endblock %}
+
+{# <div class="row flex">
+	{% for post in posts %}
+		<div class="col-4">
+			{% if post.filename %}
+				<img src="{{ vich_uploader_asset(post, 'imageFile')}}" style="width:60%; height:auto;">
+			{% endif %}
+			<a href="{{ path('post', {id : post.id})}}">
+				<h3>
+					{{ post.title }}
+				</h3>
+			</a>
+			<p>
+				{{ post.description }}
+			</p>
+		</div>
+	{% endfor %}
+</div>
+<div class="pagination">
+	{{ knp_pagination_render(posts) }}
+</div> #}
