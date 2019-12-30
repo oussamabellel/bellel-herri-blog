@@ -55,6 +55,11 @@
 				{% endfor %}
 			</tbody>
 		</table>
+
+		<div id="pagination" class="pagination d-flex justify-content-center">
+			{{ knp_pagination_render(posts) }}
+		</div>
+		
 		<div class="text-right">
 			<a href="{{ path('admin_create')}}" class="btn my-btn-third">
 				Create Post

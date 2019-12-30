@@ -8,6 +8,7 @@ use App\Form\PostType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Knp\Component\Pager\PaginatorInterface;
 
 class AdminPostController extends AbstractController
 {
@@ -22,9 +23,13 @@ class AdminPostController extends AbstractController
     /**
      * @Route("/admin/posts", name="admin_post")
      */
-    public function index()
+    public function index(PaginatorInterface $paginator,Request $request)
     {
-        $posts = $this->repository->findAll();
+        $posts = $paginator->paginate(
+            $this->getDoctrine()->getRepository(Post::class)->findBy([], ['created_at' => 'DESC']),
+            $request->query->getInt('page', 1),
+            6 );
+        //$posts = $this->repository->findAll();
         return $this->render('admin_post/index.html.twig', [
             'controller_name' => 'AdminPostController',
             'posts' => $posts
