@@ -4,7 +4,6 @@ body {
 
 a {
   color: #994711 !important;
- 
 }
 
 a:after {
@@ -25,7 +24,6 @@ a:after {
 
 #top-nav {
     background-color : #e06717;
-    height: 5em;
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu {
