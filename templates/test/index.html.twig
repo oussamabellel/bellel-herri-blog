@@ -4,10 +4,10 @@
 {% endblock %}
 
 {% block body %}
-	<div class="page-content p-3 bg-white rounded my-shadow">
+	<div class="content page-content p-3 bg-white my-shadow">
 		<div class="row d-flex justify-content-center">
 			{% for post in posts %}
-				<div class="col-md-4 col-sm-6 col-lg-3 col-xl-2 d-flex justify-content-center">
+				<div class="col-md-4 col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
 					<div class="card mb-4" style="width: 18rem;">
 						{% if post.filename %}
 						<a href="{{ path('post', {id : post.id})}}">
@@ -25,7 +25,7 @@
 			{% endfor %}
 		</div>
 
-		<div class="pagination d-flex justify-content-center">
+		<div id="pagination" class="pagination d-flex justify-content-center">
 			{{ knp_pagination_render(posts) }}
 		</div>
 	<div>

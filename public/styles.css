@@ -1,31 +1,48 @@
-body {
-  background-color : #fff4ed !important
+html, body {
+  height: 100%;
 }
 
-a {
-  color: #994711 !important;
+body {
+  background-color : #dfdfdf !important
+}
+
+#top-nav a {
+  color: #dfdfdf !important;
  
 }
 
-a:after {
-  color: #994711 !important;
+.my-btn-primary {
+    color: #fff !important;
+    background-color: #dd0000;
+    border-color: #dd0000;
 }
 
-.btn-orange {
-    color: #fff;
-    background-color: #994711;
-    border-color: #994711;
+.my-btn-secondary {
+  color: #fff !important;
+  background-color: #2b2c2d;
+  border-color: #2b2c2d;
 }
+
+.my-btn-third {
+  color: #fff !important;
+  background-color: #7a7d80;
+  border-color: #7a7d80;
+}
+
 
 .btn-orange:hover, .btn-orange:focus, .btn-orange:active, .btn-orange.active, .open>.dropdown-toggle.btn-orange {
-  color: #fff !important;
+  color: #f4f4f4 !important;
   background-color: #994711 !important;
   border-color: #994711 !important; /*set the color you want here*/
 }
 
 #top-nav {
-    background-color : #e06717;
+    background-color : #2b2c2d;
     height: 5em;
+}
+
+.navbar-logo {
+  background-color: #dd0000;
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu {
@@ -39,13 +56,10 @@ a:after {
 
 }
 
-#top-nav a {
-  color: #fff !important;
+a {
+  color: #dd0000 !important;
 }
 
-.login-card {
-  background-color: white;
-}
 .login-logo {
   height: 250px;
   width: auto;
@@ -58,4 +72,22 @@ img {
 
 .my-shadow {
   box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content {
+  background-color: #f4f4f4 !important;
+  height: 100%;
+  position: absolute;
+  top: 5em;
+  z-index: 100;
+  
+}
+.page-content {
+  width: 70%;
+  left: 15%;
+}
+
+.login-content {
+  top: calc(5% + 5em);
+  height: 100%;
 }
