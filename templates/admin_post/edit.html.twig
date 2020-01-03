@@ -3,13 +3,16 @@
 {% block title %}Edit Article{% endblock %}
 
 {% block body %}
-    <div class="col-md-8 content page-content p-3 bg-white rounded my-shadow">
+    <div class="col-md-8 content p-3 bg-white rounded my-shadow">
         <h2> Edit Post </h2>
         <hr>
 
         {{form_start(form)}}
         {{form_rest(form)}}
-        <button class="btn my-btn-primary">Save</button>
+        <button class="btn my-btn-primary">
+            <i class="far fa-save"></i>
+            Save
+        </button>
         {{form_end(form)}}
     </div>
 {% endblock %}

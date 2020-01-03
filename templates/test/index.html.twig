@@ -3,11 +3,11 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-	<div class="col-md-10 content page-content p-3 bg-white my-shadow">
+	<div class="col-md-10 content p-3 bg-white my-shadow">
 		<div class="row d-flex justify-content-center">
 			{% for post in posts %}
-				<div class="article-card col-sm-12 col-md-4 col-lg-3 col-xl-3 d-flex justify-content-center">
-					<div class="card mb-4" style="width: 18rem;">
+				<div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 d-flex justify-content-center">
+					<div class="card card-shadow mb-4" style="width: 18rem;">
 						{% if post.filename %}
 						<a href="{{ path('post', {id : post.id})}}">
 							<div class="embed-responsive embed-responsive-1by1">

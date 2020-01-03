@@ -2,6 +2,17 @@ body {
   background-color : #dfdfdf !important;
 }
 
+#top-nav {
+  background-color : #2b2c2d;
+}
+
+.navbar-logo {
+  background-color: #dd0000;
+  border-radius: .5rem !important;
+  padding: 0.25em;
+  margin-right: 2em;
+  height: 4em;
+}
 #top-nav a {
   color: #dfdfdf !important;
 }
@@ -22,17 +33,6 @@ body {
   color: #fff !important;
   background-color: #7a7d80;
   border-color: #7a7d80;
-}
-
-#top-nav {
-    background-color : #2b2c2d;
-}
-
-.navbar-logo {
-  background-color: #dd0000;
-  border-radius: .5rem !important;
-  padding: 0.25em;
-  margin-right: 2em;
 }
 
 a {
@@ -73,14 +73,11 @@ img {
   margin-bottom: 0.5em;
   border-radius: .5rem !important;
 }
-.page-content {
 
+.article-text {
+  white-space: pre-wrap;
 }
 
-.login-content {
-
-}
-
-.article-card {
-  
+.card-shadow:hover {
+  box-shadow: 0 0em 0.75em 0 rgba(0, 0, 0, 0.2), 0 0em 1.5em 0 rgba(0, 0, 0, 0.19);
 }

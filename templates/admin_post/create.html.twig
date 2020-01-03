@@ -3,12 +3,15 @@
 {% block title %}Create Article{% endblock %}
 
 {% block body %}
-    <div class="col-md-8 content page-content p-3 bg-white rounded my-shadow">
+    <div class="col-md-8 content p-3 bg-white rounded my-shadow">
         <h1> Create Post </h1>
         <hr>
         {{form_start(form)}}
         {{form_rest(form)}}
-        <button class="btn my-btn-primary"> Create </button>
+        <button class="btn my-btn-primary"> 
+            <i class="fa fa-plus"></i>
+            Create 
+        </button>
         {{form_end(form)}}
     </div>
 {% endblock %}

@@ -5,22 +5,21 @@
 {% endblock %}
 
 {% block body %}
-    <div class="col-md-8 content page-content p-3 bg-white my-shadow">
+    <div class="col-md-8 content p-3 bg-white my-shadow">
         <p class="h1 text-center">{{post.title}}</p>
         <hr>
         <div class="row">
-            <div class="col-md-4">
-                {% if post.filename %}
+            {% if post.filename %}
+            <div class="col-md-4 mb-4">
                 <img class="img-fluid" src="{{ vich_uploader_asset(post, 'imageFile')}}">
-                {% else %}
-                 <img class="img-fluid" src="{{ asset('images/posts/No_Image_Available.jpg') }}">
-                {% endif %}
-                
             </div>
             <div class="col-md-8">
-                <p class="text-justify"> {{ post.description }} </p>
+            {% else %}
+               <div class="col-md-12">
+            {% endif %}
+                <p class="article-text"> {{ post.description }} </p>
                 <br>
-             <h6 class="text-right"> Créé le  : {{ post.createdAt | date("Y-m-d H:i:s") }} </h6>
+             <h6 class="text-right"> Créé le  : {{ post.createdAt | date("d-m-Y H:i:s") }} </h6>
 
             </div>
         </div>

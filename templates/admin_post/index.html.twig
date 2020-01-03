@@ -3,7 +3,7 @@
 {% block title %}Manage articles{% endblock %}
 
 {% block body %}
-	<div class="col-md-8 content page-content p-3 bg-white rounded my-shadow">
+	<div class="col-md-8 content p-3 bg-white rounded my-shadow">
 		<h1>
 			Manage articles
 		</h1>
@@ -41,12 +41,15 @@
 						<td>
 							{{ post.getCreatedAt()|date("Y-m-d H:i:s") }}</td>
 						<td>
-							<a href="{{ path('admin_edit', {id : post.id})}}" class="btn my-btn-secondary">
-								Modify</a>
+							<a href="{{ path('admin_edit', {id : post.id})}}" class="btn my-btn-secondary my-1">
+								<i class="fa fa-edit"></i>
+								Modify
+							</a>
 							<form method="post" action="{{ path('admin_delete', {id : post.id})}}" style="display: inline-block" onsubmit="return confirm('Are you sure to delete this post ?')">
 								<input type="hidden" name="_method" value="DELETE">
 								<input type="hidden" name="_token" value="{{csrf_token('delete' ~ post.id)}}">
-								<button class="btn my-btn-primary">
+								<button class="btn my-btn-primary my-1">
+								<i class="fa fa-trash-alt"></i>
 									Delete
 								</button>
 							</form>
@@ -62,6 +65,7 @@
 		
 		<div class="text-right">
 			<a href="{{ path('admin_create')}}" class="btn my-btn-third">
+				<i class="fa fa-plus"></i>
 				Create Post
 			</a>
 		</div>
