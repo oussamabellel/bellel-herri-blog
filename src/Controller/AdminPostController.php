@@ -86,13 +86,10 @@ class AdminPostController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->remove($post);
             $em->flush();
-         }
-        
+         }   
         $this->addFlash('success', 'Post deleted sucessfully');
         return $this->redirectToRoute('admin_post');
     
     }
 
-    
-    
 }
