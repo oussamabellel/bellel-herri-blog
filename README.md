@@ -20,6 +20,7 @@ URL du site : https://bellel-herri-blog.herokuapp.com/
 
 # CSS
 - Bootstrap
+- FontAwesome
 
 # Base de données
 - Heroku PostgreSQL 9.5
