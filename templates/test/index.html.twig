@@ -1,13 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TestController!
-{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block body %}
-	<div class="content page-content p-3 bg-white my-shadow">
+	<div class="col-md-10 content page-content p-3 bg-white my-shadow">
 		<div class="row d-flex justify-content-center">
 			{% for post in posts %}
-				<div class="col-md-4 col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center">
+				<div class="article-card col-sm-12 col-md-4 col-lg-3 col-xl-3 d-flex justify-content-center">
 					<div class="card mb-4" style="width: 18rem;">
 						{% if post.filename %}
 						<a href="{{ path('post', {id : post.id})}}">
@@ -37,24 +36,3 @@
 		</div>
 	<div>
 {% endblock %}
-
-{# <div class="row flex">
-	{% for post in posts %}
-		<div class="col-4">
-			{% if post.filename %}
-				<img src="{{ vich_uploader_asset(post, 'imageFile')}}" style="width:60%; height:auto;">
-			{% endif %}
-			<a href="{{ path('post', {id : post.id})}}">
-				<h3>
-					{{ post.title }}
-				</h3>
-			</a>
-			<p>
-				{{ post.description }}
-			</p>
-		</div>
-	{% endfor %}
-</div>
-<div class="pagination">
-	{{ knp_pagination_render(posts) }}
-</div> #}

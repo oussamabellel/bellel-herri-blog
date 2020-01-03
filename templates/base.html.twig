@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Welcome!{% endblock %}</title>
-  
+
   {% block stylesheets %}
       <link href="{{ asset('src/bootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
       <link href="{{ asset('styles.css') }}" type="text/css" rel="stylesheet">
@@ -24,12 +25,13 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/admin/posts">Manage Posts</a>
-        </li>
         {%  if not app.user %}
         <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="/admin/posts">Manage Articles</a>
         </li>
         {% endif %}
       </ul>
@@ -38,7 +40,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/logout"> Logout </a>
           </li>
-          </ul>
+        </ul>
       {% endif %}
     </div>
   </nav>

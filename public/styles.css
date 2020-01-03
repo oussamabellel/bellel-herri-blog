@@ -1,14 +1,9 @@
-html, body {
-  height: 100%;
-}
-
 body {
-  background-color : #dfdfdf !important
+  background-color : #dfdfdf !important;
 }
 
 #top-nav a {
   color: #dfdfdf !important;
- 
 }
 
 .my-btn-primary {
@@ -29,39 +24,30 @@ body {
   border-color: #7a7d80;
 }
 
-
-.btn-orange:hover, .btn-orange:focus, .btn-orange:active, .btn-orange.active, .open>.dropdown-toggle.btn-orange {
-  color: #f4f4f4 !important;
-  background-color: #994711 !important;
-  border-color: #994711 !important; /*set the color you want here*/
-}
-
 #top-nav {
     background-color : #2b2c2d;
-    height: 5em;
 }
 
 .navbar-logo {
   background-color: #dd0000;
-}
-
-.navbar-default .navbar-nav .open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu {
-    background-color: #3344ff;
-    color:#ffffff;
-  }
-
-.navbar-default .dropdown-menu {
-     background-color: #3344ff;
-     color:#ffffff;
-
+  border-radius: .5rem !important;
+  padding: 0.25em;
+  margin-right: 2em;
 }
 
 a {
   color: #dd0000 !important;
 }
 
+.page-item.active .page-link
+{
+  color: #fff !important;
+  background-color: #dd0000 !important;
+  border-color: #dd0000;
+}
+
 .login-logo {
-  height: 250px;
+  height: 15.625em;
   width: auto;
 }
 
@@ -70,24 +56,31 @@ img {
   max-height: 100%;
 }
 
+.img-fluid
+{
+  width: 100%; 
+  height: auto;
+}
+
+
 .my-shadow {
-  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 8px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0em 0.25em 0 rgba(0, 0, 0, 0.2), 0 0em 0.5em 0 rgba(0, 0, 0, 0.19);
 }
 
 .content {
   background-color: #f4f4f4 !important;
-  height: 100%;
-  position: absolute;
-  top: 5em;
-  z-index: 100;
-  
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: .5rem !important;
 }
 .page-content {
-  width: 70%;
-  left: 15%;
+
 }
 
 .login-content {
-  top: calc(5% + 5em);
-  height: 100%;
+
+}
+
+.article-card {
+  
 }
